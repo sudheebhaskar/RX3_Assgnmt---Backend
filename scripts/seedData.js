@@ -1,6 +1,4 @@
 
-const fetch = require('node-fetch');
-
 const students = [
   { name: "John Doe", age: 15, grade: "A", marks: 92, attendance: 95, gender: "Male" },
   { name: "Jane Smith", age: 16, grade: "B", marks: 85, attendance: 88, gender: "Female" },
@@ -10,8 +8,10 @@ const students = [
 
 async function seedData() {
   try {
+    const fetch = (await import('node-fetch')).default;
+    
     for (const student of students) {
-      const response = await fetch('http://localhost:3000/students', {
+      const response = await fetch('http://0.0.0.0:3000/students', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
