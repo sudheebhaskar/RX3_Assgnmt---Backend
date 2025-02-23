@@ -22,3 +22,11 @@ author = 12137914
 [[workflows.workflow.tasks]]
 task = "shell.exec"
 args = "node index.js"
+
+[[workflows.workflow]]
+name = "Seed Data"
+author = 12137914
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "node scripts/seedData.js"
