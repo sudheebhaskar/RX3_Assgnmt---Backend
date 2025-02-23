@@ -11,3 +11,14 @@ run = ["sh", "-c", "node index.js"]
 [[ports]]
 localPort = 3000
 externalPort = 80
+
+[workflows]
+runButton = "Run"
+
+[[workflows.workflow]]
+name = "Run"
+author = 12137914
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "node index.js"
